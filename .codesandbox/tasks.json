@@ -1,0 +1,41 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "name": "Install Dependencies",
+      "command": "yarn install"
+    }
+  ],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "serve": {
+      "name": "serve",
+      "command": "yarn serve",
+      "runAtStart": true,
+      "preview": {
+        "port": 8080
+      }
+    },
+    "docs:build": {
+      "name": "docs:build",
+      "command": "yarn docs:build",
+      "runAtStart": false
+    },
+    "build": {
+      "name": "build",
+      "command": "yarn build",
+      "runAtStart": false
+    },
+    "lerna-publish": {
+      "name": "lerna-publish",
+      "command": "yarn lerna-publish",
+      "runAtStart": false
+    },
+    "lint": {
+      "name": "lint",
+      "command": "yarn lint",
+      "runAtStart": false
+    }
+  }
+}
