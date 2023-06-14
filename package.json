@@ -1,0 +1,128 @@
+{
+  "name": "am-editor-vue2",
+  "version": "1.0.0",
+  "keyword": "editor-vue2",
+  "description": "A Vue.js project",
+  "author": "张彬 <bjzhang.bin@163.com>",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "docs:build": "vue-cli-service build",
+    "build": "node ./scripts/build",
+    "lerna-publish": "yarn build & lerna publish",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@aomao/engine": "^2.9",
+    "@aomao/plugin-alignment": "^2.9",
+    "@aomao/plugin-backcolor": "^2.9",
+    "@aomao/plugin-bold": "^2.9",
+    "@aomao/plugin-code": "^2.9",
+    "@aomao/plugin-file": "^2.9",
+    "@aomao/plugin-fontcolor": "^2.9",
+    "@aomao/plugin-fontfamily": "^2.9",
+    "@aomao/plugin-fontsize": "^2.9",
+    "@aomao/plugin-heading": "^2.9",
+    "@aomao/plugin-hr": "^2.9",
+    "@aomao/plugin-image": "^2.9",
+    "@aomao/plugin-indent": "^2.9",
+    "@aomao/plugin-italic": "^2.9",
+    "@aomao/plugin-line-height": "^2.9",
+    "@aomao/plugin-mark-range": "^2.9",
+    "@aomao/plugin-math": "^2.9",
+    "@aomao/plugin-mention": "^2.9",
+    "@aomao/plugin-orderedlist": "^2.9",
+    "@aomao/plugin-paintformat": "^2.9",
+    "@aomao/plugin-quote": "^2.9",
+    "@aomao/plugin-redo": "^2.9",
+    "@aomao/plugin-removeformat": "^2.9",
+    "@aomao/plugin-selectall": "^2.9",
+    "@aomao/plugin-status": "^2.9",
+    "@aomao/plugin-strikethrough": "^2.9",
+    "@aomao/plugin-sub": "^2.9",
+    "@aomao/plugin-sup": "^2.9",
+    "@aomao/plugin-table": "^2.9",
+    "@aomao/plugin-tasklist": "^2.9",
+    "@aomao/plugin-underline": "^2.9",
+    "@aomao/plugin-undo": "^2.9",
+    "@aomao/plugin-unorderedlist": "^2.9",
+    "@aomao/plugin-video": "^2.9",
+    "@aomao/plugin-yjs": "^1.0.5",
+    "@aomao/plugin-yjs-websocket": "^1.0.8",
+    "@faker-js/faker": "^7.6.0",
+    "ant-design-vue": "^1.7.8",
+    "autosize": "^6.0.1",
+    "codemirror": "^5.63.3",
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11",
+    "vue-class-component": "^7.2.3",
+    "vue-property-decorator": "^9.1.2",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0",
+    "yjs": "13.5.50"
+  },
+  "devDependencies": {
+    "@types/autosize": "^4.0.1",
+    "@types/codemirror": "^5.60.7",
+    "@types/keymaster": "^1.6.30",
+    "@types/lodash": "^4.14.195",
+    "@types/markdown-it": "^12.2.3",
+    "@types/tinycolor2": "^1.4.3",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.2.20",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-import": "^1.13.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "father-build": "^1.20.1",
+    "lerna": "^4.0.0",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "lint-staged": "^11.2.3",
+    "prettier": "^2.2.1",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "rollup-plugin-vue": "^5.0.0",
+    "typescript": "~4.1.5",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended",
+      "@vue/typescript/recommended",
+      "@vue/prettier",
+      "@vue/prettier/@typescript-eslint"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2020
+    },
+    "rules": {}
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,vue,ts,tsx}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}
